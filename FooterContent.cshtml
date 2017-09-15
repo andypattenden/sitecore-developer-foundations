@@ -1,3 +1,10 @@
+@{
+    Sitecore.Data.Fields.ReferenceField mainitemfield = Model.Item.Fields["Main item"];
+    var mainitem = mainitemfield.TargetItem;
+
+    Sitecore.Data.Fields.MultilistField otherlinksfield = Model.Item.Fields["Other links"];
+    var otheritems = otherlinksfield.GetItems();
+}
 <footer>
 	<div class="container">
 		<div class="row">
@@ -5,12 +12,10 @@
 				<!-- [About Us] -->
 				<div class="well">
 					<h4>
-						About Us
+						@Html.Sitecore().Field("heading",mainitem)
 					</h4>
 					<p>
-						The Adventure Company is a nonprofit organization. In each location where we sponsor events, we carefully vet local conservation
-						organizations so that our members have the opportunity to donate their money where it will do the most good on a local
-						level.
+						@Html.Sitecore().Field("intro",mainitem)
 					</p>
 				</div>
 				<!-- [/About Us] -->
@@ -18,15 +23,13 @@
 			<div class="col-md-4">
 				<!-- [Meta Navigation] -->
 				<ul class="nav nav-stacked">
+					@foreach (var otheritem in otheritems) {
 					<li class="">
-						<a href="Content-page.html" title="Legal Notice">Legal Notice</a>
+						<a href="@Sitecore.Links.LinkManager.GetItemUrl(otheritem)">
+                            @Html.Sitecore().Field("heading", otheritem)
+                        </a>
 					</li>
-					<li class="">
-						<a href="Content-page.html" title="Privacy Policy">Privacy Policy</a>
-					</li>
-					<li class="">
-						<a href="Content-page.html" title="Terms and Conditions">Terms and Conditions</a>
-					</li>
+					}
 				</ul>
 				<!-- [/Meta Navigation] -->
 			</div>
@@ -37,7 +40,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<small class="copyright">
-							  <span style="line-height: 17.1428px;">@Html.Sitecore().Rendering("/sitecore/layout/renderings/jobs/footercontent")</span>
+						<span style="line-height: 17.1428px;">
+                            @Html.Sitecore().Field("copyright")</span>
 							</small>
 				</div>
 			</div>
