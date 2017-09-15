@@ -32,140 +32,19 @@
 		<!-- [Page Content] -->
 		<main role="main">
 			<!-- [Title and Summary] -->
-			<header class="page-header bg-media bg-parallax">
-				@Html.Sitecore().Field("Image", new {@class="image-background"})
-				<div class="container">
-					<ol class="breadcrumb">
-
-						<li class="active">
-							<a href="Careers.html">Careers</a>
-						</li>
-					</ol>
-				</div>
-
-				<div class="container">
-					<h1>
-						@Html.Sitecore().Field("Heading")
-						<br/>
-						<small>@Html.Sitecore().Field("Intro")</small>
-					</h1>
-				</div>
-			</header>
+			@Html.Sitecore().Placeholder("pagecontentheader")
 			<!-- [/Title and Summary] -->
 			<section class="section section-full">
 				<div class="container">
 					<div class="row">
 						<!-- [Job List] -->
 						<div class="col-md-8">
-							<div class="content-list joblist">
-								<ol class="media-list">
-									<li class="media">
-										<div class="media-body">
-											<h3 class="media-heading">
-												<a href="Web-Designer.html">
-													Developer
-												</a>
-											</h3>
-											<div class="description">
-												<p>The Adventure Company is currently looking for highly-skilled .NET developers to join the Product Development
-													department’s team in London and contribute to our vision of enabling our customers to own their Adventure Company
-													experience.</p>
-											</div>
-										</div>
-									</li>
-									<li class="media">
-										<div class="media-body">
-											<h3 class="media-heading">
-												<a href="Web-Designer.html">
-													HR Manager
-												</a>
-											</h3>
-											<div class="description">
-												<p>The Adventure Company is looking for an experienced Regional HR Manager with first-hand knowledge of the travel
-													industry, who is used to working with highly specialized and qualified colleagues.</p>
-											</div>
-										</div>
-									</li>
-									<li class="media">
-										<div class="media-body">
-											<h3 class="media-heading">
-												<a href="Web-Designer.html">
-													Sales Support
-												</a>
-											</h3>
-											<div class="description">
-												<p>The Sales Support team member is an expert in contract processing, and will team up with the global team for
-													ensuring best practice and knowledge sharing in order to provide world-class sales support.</p>
-											</div>
-										</div>
-									</li>
-									<li class="media">
-										<div class="media-body">
-											<h3 class="media-heading">
-												<a href="Web-Designer.html">
-													Senior Solution Architect
-												</a>
-											</h3>
-											<div class="description">
-												<p>The Adventure Company is looking for a professional with a solid background in Sitecore Commerce, Web development
-													expertise, and experience in IT (.NET) architecture, The candidate is motivated, highly technical, and service-oriented
-													with a sense of ownership from concept to completion.</p>
-											</div>
-										</div>
-									</li>
-									<li class="media">
-										<div class="media-body">
-											<h3 class="media-heading">
-												<a href="Web-Designer.html">
-													Social Media Specialist
-												</a>
-											</h3>
-											<div class="description">
-												<p>The Adventure Company has an immediate opening for a social media specialist in our marketing department located
-													in our San Francisco office HQ. This role supports and evolves the company’s social media efforts and will help
-													the right person gain experience in B2B social media, marketing, writing, and communication while working alongside
-													a small but powerful team of content and marketing pros.</p>
-											</div>
-										</div>
-									</li>
-									<li class="media">
-										<div class="media-body">
-											<h3 class="media-heading">
-												<a href="Web-Designer.html">
-													Web Designer
-												</a>
-											</h3>
-											<div class="description">
-												<p>The Adventure Company is looking for a highly skilled multi-media web designer with extensive front-end web development
-													experience to join our team with the intent to grow our capacity and capability to create and develop front-end
-													client-side web applications. </p>
-											</div>
-										</div>
-									</li>
-								</ol>
-							</div>
+							@Html.Sitecore().Placeholder("pagecontentmain")
 						</div>
 						<!-- [/Job List] -->
 						<!-- [Job Spotlight] -->
 						<div class="col-md-4">
-							<div class="well bg-primary">
-								<h5 class="text-uppercase"></h5>
-								<ul class="media-list">
-									<li class="media">
-										<div class="media-body">
-											<h4 class="media-heading">
-												<a href="Web-Designer.html">Web designer</a>
-											</h4>
-											<p>The Adventure Company is looking for a highly skilled multi-media web designer with extensive front-end web development
-												experience to join our team with the intent to grow our capacity and capability to create and develop front-end
-												client-side web applications. </p>
-										</div>
-									</li>
-								</ul>
-								<a href="Web-Designer.html" class="btn btn-default">
-							Read more
-						  </a>
-							</div>
+							@Html.Sitecore().Placeholder("pagecontentright")
 						</div>
 						<!-- [/Job Spotlight] -->
 					</div>
