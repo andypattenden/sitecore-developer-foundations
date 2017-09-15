@@ -12,7 +12,7 @@
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
-	<title>Careers </title>
+	<title>@Html.Sitecore().Field("Heading",new {DisableWebEdit=true})</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<meta property="og:title" content="" />
@@ -60,7 +60,7 @@
 		<main role="main">
 			<!-- [Title and Summary] -->
 			<header class="page-header bg-media bg-parallax">
-				<img src="images/career.jpg" class="image-background" />
+				@Html.Sitecore().Field("Image", new {@class="image-background"})
 				<div class="container">
 					<ol class="breadcrumb">
 
@@ -72,9 +72,9 @@
 
 				<div class="container">
 					<h1>
-						Careers
+						@Html.Sitecore().Field("Heading")
 						<br/>
-						<small>At the Adventure Company, we value dynamic, trustworthy people to represent our organization, and engage our members at every touchpoint. We offer world-class tours that inspire our members to contribute to making our planet a better place. </small>
+						<small>@Html.Sitecore().Field("Intro")</small>
 					</h1>
 				</div>
 			</header>
